@@ -11,6 +11,8 @@ elif [ $age -ge 13 ] && [ $age -le 19 ]; then
  echo "teenager"
 elif [ $age -ge 20 ]; then
  echo "adult"
+elif [ $age -gt 60 ]; then
+ echo "oldage"
 else
  echo "enter proper age"
 fi
