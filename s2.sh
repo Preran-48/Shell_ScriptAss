@@ -5,8 +5,12 @@ read sal
 
 if [[ -z "$sal" || "$sal" -le 0 ]]; then
   echo "enter valid salary"
-elif [ $sal -gt 0 ] && [ $sal -le 30000 ]; then
+elif [ $sal -gt 0 ] && [ $sal -lt 30000 ]; then
   echo "no tax "
+elif [ $sal -eq 30000 ];then
+  echo "5% tax for 30000"
+   tax=$(((5*$sal)/100))
+  echo "the tax is $tax"
 elif [ $sal -gt 30000 ] && [ $sal -le 40000 ]; then
   echo "10% tax for sal"
    tax=$(((10*$sal)/100))
